@@ -1,0 +1,1 @@
+/home/eclips/go/bin/gdrive --service-account config.json upload /home/eclips/rtl_backup/channel-all.bak --parent 1z7TiAfpXtG4BzZ88dc_UbCNxYrrcKBEs
