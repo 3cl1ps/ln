@@ -1,0 +1,16 @@
+#!/bin/bash
+echo "stopping deamon"
+lncli stop
+pkill poold
+pkill loopd
+sleep 10
+#pkill lnd
+#sleep 10
+echo "starting lnd"
+nohup /home/eclips/go/bin/lnd > /tmp/lnd.log 2>&1 &
+sleep 30
+echo "unlocking"
+/home/eclips/lnd-unlockwallet.sh
+sleep 60
+nohup /home/eclips/go/bin/poold > /tmp/pool.log 2>&1 &
+nohup /home/eclips/go/bin/loopd > /tmp/loop.log 2>&1 &
