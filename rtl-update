@@ -1,0 +1,5 @@
+cd /home/eclips/RTL
+/usr/bin/git reset --hard HEAD
+/usr/bin/git clean -f -d
+/usr/bin/git pull
+/usr/local/bin/npm install --only=prod
